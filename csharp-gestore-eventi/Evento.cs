@@ -53,5 +53,35 @@ namespace csharp_gestore_eventi
             _capienzaMassima = postiDisponibili;
             _postiPrenotati = 0; // il numero di posti inizialmente prenotati
         }
+
+        // Metodo per prenotare posti
+        public void PrenotaPosti(int postiDaPrenotare)
+        {
+            if (DateTime.Today > Data)
+                throw new InvalidOperationException("Impossibile prenotare posti per un evento passato.");
+
+            if (_postiPrenotati + postiDaPrenotare > _capienzaMassima)
+                throw new InvalidOperationException("Non ci sono abbastanza posti disponibili.");
+
+            _postiPrenotati += postiDaPrenotare;
+        }
+
+        // Metodo per disdire posti
+        public void DisdiciPosti(int postiDaDisdire)
+        {
+            if (DateTime.Today > Data)
+                throw new InvalidOperationException("Impossibile disdire posti per un evento passato.");
+
+            if (postiDaDisdire > _postiPrenotati)
+                throw new InvalidOperationException("Impossibile disdire più posti di quelli prenotati.");
+
+            _postiPrenotati -= postiDaDisdire;
+        }
+
+        // Override del metodo ToString()
+        public override string ToString()
+        {
+            return $"{Data.ToString("dd/MM/yyyy")} - {Titolo}";
+        }
     }
 }
