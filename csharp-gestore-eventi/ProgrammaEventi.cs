@@ -21,5 +21,21 @@ namespace csharp_gestore_eventi
         {
             eventi.Add(nuovoEvento);
         }
+
+        public static string StampareEventi(List<Evento> listaEventi)       // metodo per stampare una lista eventi
+        {
+        if (listaEventi == null || listaEventi.Count == 0)
+            {
+                return "Nessun evento disponibile";
+            }
+
+            string result = "";
+
+            foreach(var evento in listaEventi)
+            {
+                result += evento.ToString();
+            }
+            return result;
+        }
     }
 }
