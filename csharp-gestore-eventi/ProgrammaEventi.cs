@@ -37,5 +37,15 @@ namespace csharp_gestore_eventi
             }
             return result;
         }
+
+        public int NumeroEventi()       // metodo per contare gli eventi nella lista
+        {
+            return eventi.Count;
+        }
+
+        public void SvuotaEventi()      // metodo per svuotare la lista degli eventi
+        {
+            eventi.Clear();
+        }
     }
 }
