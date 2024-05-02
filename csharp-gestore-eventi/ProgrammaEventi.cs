@@ -47,5 +47,10 @@ namespace csharp_gestore_eventi
         {
             eventi.Clear();
         }
+
+        public List<Evento> EventiInData(DateTime data)
+        {
+            return eventi.Where(e => e.Data.Date == data.Date).ToList();
+        }
     }
 }

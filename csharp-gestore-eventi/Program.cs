@@ -46,56 +46,57 @@
 
                     Evento nuovoEvento = new Evento(titolo, data, capienzaMassima);
                     programma.AggiungiEvento(nuovoEvento);
-                    // Milestone 1 e 2 //// Prenotazione di posti
-                    // Milestone 1 e 2 //Console.Write("Quanti posti desideri prenotare? ");
-                    // Milestone 1 e 2 //string risposta = Console.ReadLine();
-                    // Milestone 1 e 2 
-                    // Milestone 1 e 2 //int postiDaPrenotare;
-                    // Milestone 1 e 2 //while (!int.TryParse(risposta, out postiDaPrenotare) || postiDaPrenotare <= 0)
-                    // Milestone 1 e 2 //{
-                    // Milestone 1 e 2 //    Console.WriteLine("Inserisci un numero valido di posti da prenotare:");
-                    // Milestone 1 e 2 //}
-                    // Milestone 1 e 2 
-                    // Milestone 1 e 2 //try
-                    // Milestone 1 e 2 //{
-                    // Milestone 1 e 2 //    nuovoEvento.PrenotaPosti(postiDaPrenotare);
-                    // Milestone 1 e 2 //    Console.WriteLine($"\nNumero di posti prenotati: {nuovoEvento.PostiPrenotati}");
-                    // Milestone 1 e 2 //    Console.WriteLine($"Numero di posti disponibili: {nuovoEvento.CapienzaMassima - nuovoEvento.PostiPrenotati}");
-                    // Milestone 1 e 2 //}
-                    // Milestone 1 e 2 //catch (Exception ex)
-                    // Milestone 1 e 2 //{
-                    // Milestone 1 e 2 //    Console.WriteLine($"Errore: {ex.Message}");
-                    // Milestone 1 e 2 //}
-                    // Milestone 1 e 2 
-                    // Milestone 1 e 2 //// Disdetta di posti
-                    // Milestone 1 e 2 //Console.Write("\nVuoi disdire dei posti (si/no)? ");
-                    // Milestone 1 e 2 //risposta = Console.ReadLine();
-                    // Milestone 1 e 2 //while (risposta == "si")
-                    // Milestone 1 e 2 //{
-                    // Milestone 1 e 2 //    Console.Write("Indica il numero di posti da disdire: ");
-                    // Milestone 1 e 2 //    int postiDaDisdire;
-                    // Milestone 1 e 2 //    while (!int.TryParse(Console.ReadLine(), out postiDaDisdire) || postiDaDisdire <= 0)
-                    // Milestone 1 e 2 //    {
-                    // Milestone 1 e 2 //        Console.WriteLine("Inserisci un numero valido di posti da disdire:");
-                    // Milestone 1 e 2 //    }
-                    // Milestone 1 e 2 
-                    // Milestone 1 e 2 //    try
-                    // Milestone 1 e 2 //    {
-                    // Milestone 1 e 2 //        nuovoEvento.DisdiciPosti(postiDaDisdire);
-                    // Milestone 1 e 2 //        Console.WriteLine($"\nNumero di posti prenotati: {nuovoEvento.PostiPrenotati}");
-                    // Milestone 1 e 2 //        Console.WriteLine($"Numero di posti disponibili: {nuovoEvento.CapienzaMassima - nuovoEvento.PostiPrenotati}");
-                    // Milestone 1 e 2 //    }
-                    // Milestone 1 e 2 //    catch (Exception ex)
-                    // Milestone 1 e 2 //    {
-                    // Milestone 1 e 2 //        Console.WriteLine($"Errore: {ex.Message}");
-                    // Milestone 1 e 2 //    }
-                    // Milestone 1 e 2 //    Console.Write("\nVuoi disdire dei posti (si/no)? ");
-                    // Milestone 1 e 2 //    risposta = Console.ReadLine();
-                    // Milestone 1 e 2 
-                    // Milestone 1 e 2 //    Console.WriteLine("OK va bene!");
-                    // Milestone 1 e 2 //    Console.WriteLine($"\nNumero di posti prenotati: {nuovoEvento.PostiPrenotati}");
-                    // Milestone 1 e 2 //    Console.WriteLine($"Numero di posti disponibili: {nuovoEvento.CapienzaMassima - nuovoEvento.PostiPrenotati}");
-                    // Milestone 1 e 2 //}
+                    { // Milestone 2 //// Prenotazione di posti
+                      // Milestone 2 //Console.Write("Quanti posti desideri prenotare? ");
+                      // Milestone 2 //string risposta = Console.ReadLine();
+                      // Milestone 2 
+                      // Milestone 2 //int postiDaPrenotare;
+                      // Milestone 2 //while (!int.TryParse(risposta, out postiDaPrenotare) || postiDaPrenotare <= 0)
+                      // Milestone 2 //{
+                      // Milestone 2 //    Console.WriteLine("Inserisci un numero valido di posti da prenotare:");
+                      // Milestone 2 //}
+                      // Milestone 2 
+                      // Milestone 2 //try
+                      // Milestone 2 //{
+                      // Milestone 2 //    nuovoEvento.PrenotaPosti(postiDaPrenotare);
+                      // Milestone 2 //    Console.WriteLine($"\nNumero di posti prenotati: {nuovoEvento.PostiPrenotati}");
+                      // Milestone 2 //    Console.WriteLine($"Numero di posti disponibili: {nuovoEvento.CapienzaMassima - nuovoEvento.PostiPrenotati}");
+                      // Milestone 2 //}
+                      // Milestone 2 //catch (Exception ex)
+                      // Milestone 2 //{
+                      // Milestone 2 //    Console.WriteLine($"Errore: {ex.Message}");
+                      // Milestone 2 //}
+                      // Milestone 2 
+                      // Milestone 2 //// Disdetta di posti
+                      // Milestone 2 //Console.Write("\nVuoi disdire dei posti (si/no)? ");
+                      // Milestone 2 //risposta = Console.ReadLine();
+                      // Milestone 2 //while (risposta == "si")
+                      // Milestone 2 //{
+                      // Milestone 2 //    Console.Write("Indica il numero di posti da disdire: ");
+                      // Milestone 2 //    int postiDaDisdire;
+                      // Milestone 2 //    while (!int.TryParse(Console.ReadLine(), out postiDaDisdire) || postiDaDisdire <= 0)
+                      // Milestone 2 //    {
+                      // Milestone 2 //        Console.WriteLine("Inserisci un numero valido di posti da disdire:");
+                      // Milestone 2 //    }
+                      // Milestone 2 
+                      // Milestone 2 //    try
+                      // Milestone 2 //    {
+                      // Milestone 2 //        nuovoEvento.DisdiciPosti(postiDaDisdire);
+                      // Milestone 2 //        Console.WriteLine($"\nNumero di posti prenotati: {nuovoEvento.PostiPrenotati}");
+                      // Milestone 2 //        Console.WriteLine($"Numero di posti disponibili: {nuovoEvento.CapienzaMassima - nuovoEvento.PostiPrenotati}");
+                      // Milestone 2 //    }
+                      // Milestone 2 //    catch (Exception ex)
+                      // Milestone 2 //    {
+                      // Milestone 2 //        Console.WriteLine($"Errore: {ex.Message}");
+                      // Milestone 2 //    }
+                      // Milestone 2 //    Console.Write("\nVuoi disdire dei posti (si/no)? ");
+                      // Milestone 2 //    risposta = Console.ReadLine();
+                      // Milestone 2 
+                      // Milestone 2 //    Console.WriteLine("OK va bene!");
+                      // Milestone 2 //    Console.WriteLine($"\nNumero di posti prenotati: {nuovoEvento.PostiPrenotati}");
+                      // Milestone 2 //    Console.WriteLine($"Numero di posti disponibili: {nuovoEvento.CapienzaMassima - nuovoEvento.PostiPrenotati}");
+                      // Milestone 2 //}
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -106,6 +107,25 @@
             Console.WriteLine("Ecco il tuo programma eventi:");
             Console.WriteLine(titoloProgramma);
             Console.WriteLine(ProgrammaEventi.StampareEventi(programma.eventi));
+
+            Console.Write("\nInserisci una data per per sapere che eventi ci saranno (dd/mm/yyyy): ");
+            DateTime dataScelta;
+            while (true)
+            {
+                if (!DateTime.TryParseExact(Console.ReadLine(), "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out dataScelta))
+                {
+                    Console.WriteLine("Formato data non valido. Inserisci la data nel formato richiesto (dd/MM/yyyy): ");
+                    continue;
+                }
+                break;
+            }
+            List<Evento> eventiInData = programma.EventiInData(dataScelta);
+
+            Console.WriteLine($"\nGli eventi in data {dataScelta.ToString("dd/MM/yyyy")} sono:");
+            Console.WriteLine(ProgrammaEventi.StampareEventi(programma.EventiInData(dataScelta)));
+
+            programma.SvuotaEventi();
+            Console.WriteLine("\nTutti gli eventi sono stati eliminati dal programma.");
         }
     }
 }
