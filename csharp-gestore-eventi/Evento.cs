@@ -60,6 +60,9 @@ namespace csharp_gestore_eventi
             if (DateTime.Today > Data)
                 throw new InvalidOperationException("Impossibile prenotare posti per un evento passato.");
 
+            if (postiDaPrenotare <= 0)
+                throw new ArgumentException("Il numero di posti da prenotare deve essere positivo");
+
             if (_postiPrenotati + postiDaPrenotare > _capienzaMassima)
                 throw new InvalidOperationException("Non ci sono abbastanza posti disponibili.");
 
@@ -71,6 +74,9 @@ namespace csharp_gestore_eventi
         {
             if (DateTime.Today > Data)
                 throw new InvalidOperationException("Impossibile disdire posti per un evento passato.");
+
+            if (postiDaDisdire <= 0)
+                throw new ArgumentException("Il numero di posti da disdire deve essere positivo");
 
             if (postiDaDisdire > _postiPrenotati)
                 throw new InvalidOperationException("Impossibile disdire più posti di quelli prenotati.");
