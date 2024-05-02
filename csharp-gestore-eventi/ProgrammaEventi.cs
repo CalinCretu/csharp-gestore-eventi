@@ -31,9 +31,9 @@ namespace csharp_gestore_eventi
 
             string result = "";
 
-            foreach(var evento in listaEventi)
+            foreach (var evento in listaEventi)
             {
-                result += evento.ToString();
+                result += $"      {evento.ToString()}";
             }
             return result;
         }

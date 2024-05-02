@@ -15,14 +15,14 @@
             int numeroEventiDaAggiungere;
             while (!int.TryParse(Console.ReadLine(), out numeroEventiDaAggiungere) || numeroEventiDaAggiungere <= 0)
             {
-                Console.WriteLine("Inserisci un numero valido di eventi da aggiungere:");
+                Console.WriteLine("Inserisci un numero valido di eventi da inserire:");
             }
 
             for (int i = 0; i < numeroEventiDaAggiungere; i++)
             {
                 try
                 {
-                    Console.Write("Inserisci il nome dell'evento: ");
+                    Console.Write($"\nInserisci il nome del {i + 1}° evento: ");
                     string titolo = Console.ReadLine();
 
                     Console.Write("Inserisci la data dell'evento (dd/MM/yyyy): ");
@@ -45,7 +45,7 @@
                     }
 
                     Evento nuovoEvento = new Evento(titolo, data, capienzaMassima);
-
+                    programma.AggiungiEvento(nuovoEvento);
                     // Milestone 1 e 2 //// Prenotazione di posti
                     // Milestone 1 e 2 //Console.Write("Quanti posti desideri prenotare? ");
                     // Milestone 1 e 2 //string risposta = Console.ReadLine();
@@ -102,6 +102,10 @@
                     Console.WriteLine($"Errore durante la creazione dell'evento: {ex.Message}");
                 }
             }
+            Console.WriteLine($"\nIl numero di eventi nel programma è: {programma.NumeroEventi()}");
+            Console.WriteLine("Ecco il tuo programma eventi:");
+            Console.WriteLine(titoloProgramma);
+            Console.Write(ProgrammaEventi.StampareEventi(programma.eventi));
         }
     }
 }
