@@ -101,6 +101,7 @@
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Errore durante la creazione dell'evento: {ex.Message}");
+                    i--;
                 }
             }
             Console.WriteLine($"\nIl numero di eventi nel programma è: {programma.NumeroEventi()}");
