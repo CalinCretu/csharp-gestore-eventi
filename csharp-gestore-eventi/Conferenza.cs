@@ -17,5 +17,23 @@ namespace csharp_gestore_eventi
             Relatore = relatore;
             Prezzo = prezzo;
         }
+
+        // Metodo per restituire la data e ora formattata
+        public string GetDataOraFormattata()
+        {
+            return Data.ToString("dd/MM/yyyy");
+        }
+
+        // Metodo per restituire il prezzo formattato
+        public string GetPrezzoFormattato()
+        {
+            return Prezzo.ToString("0.00") + " euro";
+        }
+
+        // Override del metodo ToString()
+        public override string ToString()
+        {
+            return $"       {GetDataOraFormattata()} - {Titolo} - {Relatore} - {GetPrezzoFormattato()}";
+        }
     }
 }

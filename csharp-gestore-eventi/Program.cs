@@ -125,8 +125,44 @@
             Console.WriteLine($"\nGli eventi in data {dataScelta.ToString("dd/MM/yyyy")} sono:");
             Console.WriteLine(ProgrammaEventi.StampareEventi(programma.EventiInData(dataScelta)));
 
-            programma.SvuotaEventi();
-            Console.WriteLine("\nTutti gli eventi sono stati eliminati dal programma.");
+            //programma.SvuotaEventi();
+            //Console.WriteLine("\nTutti gli eventi sono stati eliminati dal programma.");
+
+            Console.WriteLine("---- BONUS ----");
+            Console.WriteLine("Aggiungiamo anche una conferenza!");
+
+            Console.Write("Inserisci il nome della conferenza: ");
+            string titoloConferenza = Console.ReadLine();
+
+            Console.Write("Inserisci la data della conferenza (gg/mm/yyyy): ");
+            DateTime dataConferenza;
+            while (!DateTime.TryParseExact(Console.ReadLine(), "dd/MM/yyyy", null, System.Globalization.DateTimeStyles.None, out dataConferenza))
+            {
+                Console.WriteLine("Formato data non valido. Inserisci la data nel formato richiesto (gg/mm/yyyy): ");
+            }
+
+            Console.Write("Inserisci il numero di posti per la conferenza: ");
+            int postiConferenza;
+            while (!int.TryParse(Console.ReadLine(), out postiConferenza) || postiConferenza <= 0)
+            {
+                Console.WriteLine("Inserisci un numero valido di posti per la conferenza:");
+            }
+
+            Console.Write("Inserisci il relatore della conferenza: ");
+            string relatoreConferenza = Console.ReadLine();
+
+            Console.Write("Inserisci il prezzo del biglietto della conferenza: ");
+            double prezzoConferenza;
+            while (!double.TryParse(Console.ReadLine(), out prezzoConferenza) || prezzoConferenza <= 0)
+            {
+                Console.WriteLine("Inserisci un prezzo valido per la conferenza:");
+            }
+
+            programma.AggiungiEvento(new Conferenza(titoloConferenza, dataConferenza, postiConferenza, relatoreConferenza, prezzoConferenza));
+
+            Console.WriteLine("\nEcco il tuo programma eventi con anche le Conferenze:");
+            Console.WriteLine(programma.Titolo);
+            Console.WriteLine(ProgrammaEventi.StampareEventi(programma.eventi));
         }
     }
 }
