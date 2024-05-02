@@ -105,7 +105,7 @@
             Console.WriteLine($"\nIl numero di eventi nel programma è: {programma.NumeroEventi()}");
             Console.WriteLine("Ecco il tuo programma eventi:");
             Console.WriteLine(titoloProgramma);
-            Console.Write(ProgrammaEventi.StampareEventi(programma.eventi));
+            Console.WriteLine(ProgrammaEventi.StampareEventi(programma.eventi));
         }
     }
 }

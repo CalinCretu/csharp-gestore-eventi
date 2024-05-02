@@ -33,7 +33,7 @@ namespace csharp_gestore_eventi
 
             foreach (var evento in listaEventi)
             {
-                result += $"      {evento.ToString()}";
+                result += evento.ToString();
             }
             return result;
         }
